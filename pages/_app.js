@@ -1,7 +1,20 @@
-import '../styles/globals.css'
+import Navbar from "../components/Navbar/Navbar"
+import { ThemeProvider } from "styled-components"
+import Layout from "../components/Layout"
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+//styles
+import { GlobalStyle, darkTheme, lightTheme } from "../STYLES/styleGlobal"
+
+const App = ({ Component, pageProps }) => {
+  return (
+    <ThemeProvider theme={darkTheme}>
+      <Layout>
+        <GlobalStyle />
+  
+        <Component {...pageProps} />
+      </Layout>
+    </ThemeProvider>
+  )
 }
 
-export default MyApp
+export default App
