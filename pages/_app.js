@@ -8,9 +8,8 @@ import { GlobalStyle, darkTheme, lightTheme } from "../STYLES/styleGlobal"
 const App = ({ Component, pageProps }) => {
   return (
     <ThemeProvider theme={darkTheme}>
+      <GlobalStyle />
       <Layout>
-        <GlobalStyle />
-  
         <Component {...pageProps} />
       </Layout>
     </ThemeProvider>
