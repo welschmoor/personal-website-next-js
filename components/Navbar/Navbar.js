@@ -39,7 +39,12 @@ const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: 20px;
+  gap: 25px;
+
+  @media (max-width: 736px) {
+
+    justify-content: center;
+  }
 `
 
 export default Navbar

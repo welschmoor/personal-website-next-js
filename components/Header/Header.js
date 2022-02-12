@@ -36,9 +36,15 @@ const HeaderDiv = styled.header`
   grid-template-columns: 360px 1fr;
   justify-content: space-between;
   align-items: center;
-  padding: 50px;
+  padding: 50px 80px;
   padding-bottom: 20px;
   height: 190px;
+  transition: 0.2s;
+
+  @media (max-width: 736px) {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
 `
 
 const JumpingTitle = styled.div`
@@ -50,9 +56,16 @@ const JumpingTitle = styled.div`
     align-content: center;
     align-items: center;
     justify-items: center;
-    /* height: 240px; */
+    height: 100px;
     width: 240px;
     cursor: pointer;
+
+    @media (max-width: 736px) {
+      justify-content: start;
+    align-content: center;
+    align-items: end;
+    justify-items: start;
+  }
 `
 
 const H1 = styled.h1`

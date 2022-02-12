@@ -58,8 +58,12 @@ export const lightTheme = {
   TEXT: {
     col1: "black",
     mainNav: "#524949",
+  },
+  MARGIN: {
+    mar10: "10px",
   }
 }
+
 
 export const darkTheme = {
   BG: {
@@ -68,5 +72,8 @@ export const darkTheme = {
   TEXT: {
     col1: "black",
     mainNav: "#524949",
+  },
+  MARGIN: {
+    mar10: "10px",
   }
 }
