@@ -87,6 +87,7 @@ export const darkTheme = {
   TEXT: {
     col1: "black",
     mainNav: "#524949",
+    fadedText: "hsl(0, 5.806451612903232%, 38.3921568627451%)",
   },
   MARGIN: {
     mar10: "10px",
@@ -94,8 +95,14 @@ export const darkTheme = {
   },
   MISC: {
     scrollbar: "#E4DFD8",
+    separator: "hsl(34.99999999999998, 18.181818181818198%, 77.05882352941177%)",
   },
   TIME: {
     zero2: "0.2s",
   },
+  ICON: {
+    wheat: "hsl(0, 23.882352941176484%, 79.33333333333333%)",
+    earth: "hsl(0, 23.882352941176484%, 66.33333333333333%)",
+    cogwheel: "hsl(0, 16.882352941176484%, 77.33333333333333%)",
+  }
 }

@@ -9,6 +9,7 @@ import YTClonePictureForGithub from "../static/YTClonePictureForGithub.jpg"
 import ExpenseTracker from "../static/ExpenseTracker.jpg"
 import memoryReact from "../static/memoryReact.jpg"
 import instapound from "../static/instapound.jpg"
+import Head from "next/head"
 
 
 const projects = [
@@ -22,6 +23,7 @@ const projects = [
 const Projects = () => {
   return (
     <ProjectsWrapper>
+      <Head><title>Johannes Welsch - Projects</title></Head>
       <HomeTitleCentered>Projects</HomeTitleCentered>
       <ProjectsMap>
         {projects.map(e => {

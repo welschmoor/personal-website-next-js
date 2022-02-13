@@ -2,10 +2,14 @@
 import Link from "next/link"
 import styled from "styled-components"
 import Navbar from "../Navbar/Navbar"
+import { GiCogLock } from "react-icons/gi"
+
+
 
 const Header = () => {
   return (
     <HeaderDiv>
+      <MenuIcon />
       <Link href="/" passHref>
         <JumpingTitle>
           <H1>J</H1>
@@ -29,6 +33,20 @@ const Header = () => {
     </HeaderDiv>
   )
 }
+
+const MenuIcon = styled(GiCogLock)`
+  color: ${p => p.theme.ICON.cogwheel};
+  cursor: pointer;
+  font-size: 3rem;
+  position: absolute;
+  top: -2px;
+  left: -1px;
+  transition: transform 0.2s;
+
+  &:active {
+    transform: rotate(40deg);
+  }
+`
 
 const HeaderDiv = styled.header`
   max-width: 900px;
