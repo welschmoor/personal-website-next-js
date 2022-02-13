@@ -1,15 +1,16 @@
 
 
-import styled from "styled-components"
-import { Hometitle } from "../STYLES/styleText"
 import Project from "../components/Project/Project"
+import { Hometitle } from "../STYLES/styleText"
+import styled from "styled-components"
+import Head from "next/head"
+import { GiBookPile } from "react-icons/gi"
 
 //images
 import YTClonePictureForGithub from "../static/YTClonePictureForGithub.jpg"
 import ExpenseTracker from "../static/ExpenseTracker.jpg"
 import memoryReact from "../static/memoryReact.jpg"
 import instapound from "../static/instapound.jpg"
-import Head from "next/head"
 
 
 const projects = [
@@ -24,6 +25,7 @@ const Projects = () => {
   return (
     <ProjectsWrapper>
       <Head><title>Johannes Welsch - Projects</title></Head>
+      <ProjectsIcon />
       <HomeTitleCentered>Projects</HomeTitleCentered>
       <ProjectsMap>
         {projects.map(e => {
@@ -35,8 +37,26 @@ const Projects = () => {
     </ProjectsWrapper>)
 }
 
+const ProjectsIcon = styled(GiBookPile)`
+  display: flex;
+  margin: 0 auto;
+  margin-top: 4px;
+
+  font-size: 3.2rem;
+  color: ${p => p.theme.ICON.cogwheel};
+  top: -60px;
+  left: 46.9%;
+  transition: transform 0.1s;
+  &:active {
+    transform: scale(1.3);
+  }
+`
+
 const HomeTitleCentered = styled(Hometitle)`
+  position: relative;
+  margin-top: 0px;
   text-align: center;
+  cursor: default;
 `
 
 const ProjectsWrapper = styled.div`

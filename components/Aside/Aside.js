@@ -34,12 +34,18 @@ const Aside = () => {
 
 const AsideWrapper = styled.aside`
   /* background-color:${p => p.theme.BG.col2}; */
-  border-top: 6px solid grey;
-  /* border-bottom: 6px solid grey;
-  border-left: 2px solid grey;
-  border-right: 12px solid grey;
-  padding-bottom: 30px; */
+  /* border-top: 6px solid grey; */
+  /* border-bottom: 6px solid grey;*/
+  /* border-left: 2px solid ${p => p.theme.MISC.separator};  */
+  border-left: 2px solid grey; 
+  /* border-right: 12px solid grey; */
+  padding-bottom: 30px; 
   margin-top: 30px;
+
+  @media (max-width: 736px) {
+    border-left: none; 
+
+  }
 `
 
 const UL = styled.ul`

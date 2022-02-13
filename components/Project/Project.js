@@ -27,10 +27,11 @@ const ProjectWrapper = styled.div`
 
 const ProjectTitle = styled.h2`
   color: #524949;
-
+  cursor: default;
   font-size: 30px;
   font-weight: 600;
   font-size: 1rem;
+  
 `
 
 const Description = styled.p`
