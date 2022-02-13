@@ -12,32 +12,57 @@ const Aside = () => {
 
 
         <p>Here is a list of some of the best books ever written:</p>
-        <ul>
+        <UL>
           <li>
-            <h6>Neue Reise um die Welt</h6>
-            <p>Otto von Kotzebue</p>
+            <BookTitle>Neue Reise um die Welt</BookTitle>
+            <Author>by Otto von Kotzebue</Author>
           </li>
           <li>
-            <h6>Animal Farm</h6>
-            <p>George Orwell</p>
+            <BookTitle>Animal Farm</BookTitle>
+            <Author>by George Orwell</Author>
           </li>
           <li>
-            <h6>Roadside Picnic</h6>
-            <p>Strygatsky Brothers</p>
+            <BookTitle>Roadside Picnic</BookTitle>
+            <Author>by Strugatsky Brothers</Author>
           </li>
-        </ul>
+        </UL>
       </AsideContent>
     </AsideWrapper>
   )
 }
 
+
 const AsideWrapper = styled.aside`
-  background-color: hsl(35, 18.2%, 92.1%);
+  /* background-color:${p => p.theme.BG.col2}; */
   border-top: 6px solid grey;
+  /* border-bottom: 6px solid grey;
+  border-left: 2px solid grey;
+  border-right: 12px solid grey;
+  padding-bottom: 30px; */
+  margin-top: 30px;
+`
+
+const UL = styled.ul`
+  list-style: disc;
+  margin-left: 20px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `
 
 const AsideContent = styled.div`
   padding-left: 20px;
 `
 
+const BookTitle = styled.h5`
+  color: #1098ad;
+  font-weight: 600;
+`
+
+const Author = styled.p`
+  font-size: 18px;
+
+
+`
 export default Aside

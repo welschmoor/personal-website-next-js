@@ -39,7 +39,7 @@ const HeaderDiv = styled.header`
   padding: 50px 80px;
   padding-bottom: 20px;
   height: 190px;
-  transition: 0.2s;
+  transition: ${p => p.theme.TIME.zero2};
 
   @media (max-width: 736px) {
     grid-template-columns: 1fr;
@@ -72,7 +72,7 @@ const H1 = styled.h1`
     height: 53px;
     align-self: center;
     border: 1 solid transparent;
-    transition: height 0.2s;
+    transition: height ${p => p.theme.TIME.zero2};
     color: #524949;
     font-size: 38px;
     font-weight: 700;

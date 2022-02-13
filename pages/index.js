@@ -14,7 +14,7 @@ const Hopepage = () => {
 
   return (
     <HomeGrid>
-      <Head ><title>Johannes Welsch!</title></Head>
+      <Head><title>Johannes Welsch!</title></Head>
       <section>
         <Hometitle>Welcome to my personal Website!</Hometitle>
         <P>You will find a lot of crap on this site. Food recipies, not some crap copied from the internet, these are my personal recipies that taste like heaven. In fact one cake is called God's food that I make each year on my birthday.</P>

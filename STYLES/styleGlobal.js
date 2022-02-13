@@ -45,7 +45,17 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    color: rgb(48, 48, 48);
+    background-color: ${p => p.theme.BG.col1};
+    overflow-y: scroll;
+  }
+
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 12px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: ${p => p.theme.TEXT.scrollbar};
   }
 
 `
@@ -54,6 +64,7 @@ export const GlobalStyle = createGlobalStyle`
 export const lightTheme = {
   BG: {
     col1: "#E4DFD8",
+    col2: "hsl(35, 18.2%, 92.1%)",
   },
   TEXT: {
     col1: "black",
@@ -61,13 +72,17 @@ export const lightTheme = {
   },
   MARGIN: {
     mar10: "10px",
+  },
+  MISC: {
+    scrollbar: "hsl(34.99999999999998, 18.181818181818198%, 77.05882352941177%)",
   }
 }
 
 
 export const darkTheme = {
   BG: {
-    col1: "#E4DFD8"
+    col1: "#E4DFD8",
+    col2: "hsl(35, 18.2%, 92.1%)",
   },
   TEXT: {
     col1: "black",
@@ -75,5 +90,12 @@ export const darkTheme = {
   },
   MARGIN: {
     mar10: "10px",
-  }
+    mar20: "20px",
+  },
+  MISC: {
+    scrollbar: "#E4DFD8",
+  },
+  TIME: {
+    zero2: "0.2s",
+  },
 }

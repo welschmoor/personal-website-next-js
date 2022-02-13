@@ -32,8 +32,15 @@ const LayoutContent = styled.div`
 `
 
 const Main = styled.main`
-  margin-left: ${p => p.theme.MARGIN.mar10};
-  margin-right: ${p => p.theme.MARGIN.mar10};
+  transition: ${p => p.theme.TIME.zero2};
+
+  margin-left: ${p => p.theme.MARGIN.mar20};
+  margin-right: ${p => p.theme.MARGIN.mar20};
+
+  @media (max-width: 736px) {
+    margin-left: ${p => p.theme.MARGIN.mar10};
+    margin-right: ${p => p.theme.MARGIN.mar10};
+  }
 `
 
 export default Layout

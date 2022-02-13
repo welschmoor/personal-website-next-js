@@ -1,3 +1,5 @@
+// this is to make styled-components work with Next
+// also install babel-plugin-styled-components as -D
 {
   "presets": [
     "next/babel"

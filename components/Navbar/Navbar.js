@@ -26,7 +26,7 @@ const A = styled.a`
 
   border-bottom: 3px solid transparent;
   padding: 10px 0;
-  transition: padding 0.2s;
+  transition: padding ${p => p.theme.TIME.zero2};;
 
   &:hover {
     padding: 4px 0;
