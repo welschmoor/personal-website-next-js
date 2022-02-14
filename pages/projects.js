@@ -41,6 +41,7 @@ const ProjectsIcon = styled(GiBookPile)`
   display: flex;
   margin: 0 auto;
   margin-top: 4px;
+  transform: translateX(2px);
 
   font-size: 3.2rem;
   color: ${p => p.theme.ICON.cogwheel};

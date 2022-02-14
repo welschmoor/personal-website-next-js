@@ -10,8 +10,6 @@ import Aside from "../components/Aside/Aside"
 
 
 const Hopepage = () => {
-
-
   return (
     <HomeGrid>
       <Head><title>Johannes Welsch - Homepage</title></Head>
@@ -24,6 +22,7 @@ const Hopepage = () => {
   )
 }
 
+
 const HomeGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 300px;
@@ -31,7 +30,6 @@ const HomeGrid = styled.div`
 
   @media (max-width: 808px) {
     grid-template-columns: 1fr;
-
   }
 `
 

@@ -37,12 +37,12 @@ const AsideWrapper = styled.aside`
   /* border-top: 6px solid grey; */
   /* border-bottom: 6px solid grey;*/
   /* border-left: 2px solid ${p => p.theme.MISC.separator};  */
-  border-left: 2px solid grey; 
+  border-left: 2px solid ${p => p.theme.MISC.separator2}; 
   /* border-right: 12px solid grey; */
   padding-bottom: 30px; 
   margin-top: 30px;
 
-  @media (max-width: 736px) {
+  @media (max-width: 808px) {
     border-left: none; 
 
   }
