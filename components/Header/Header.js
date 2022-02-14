@@ -3,13 +3,30 @@ import Link from "next/link"
 import styled from "styled-components"
 import Navbar from "../Navbar/Navbar"
 import { GiCogLock } from "react-icons/gi"
+import { useState } from "react"
 
 
 
-const Header = () => {
+const Header = ({ darkMode, setDarkMode }) => {
+  const [menuOpened, setMenuOpened] = useState(true)
+  console.log(darkMode)
+  const openCloseMenu = () => {
+    console.log(menuOpened)
+    setMenuOpened(p => !p)
+  }
+  const darkModeHandler = () => {
+    console.log("dm clicked")
+    setDarkMode(p => !p)
+    localStorage.setItem("memDarkMode", darkMode)
+  }
+
   return (
     <HeaderDiv>
-      <MenuIcon />
+      <MenuIcon menuOpened={menuOpened} onClick={openCloseMenu} />
+      <MenuIconMask />
+      <Menu menuOpened={menuOpened} onClick={darkModeHandler} >{darkMode ? "dark mode" : "light mode"}</Menu>
+      <Menu2 menuOpened={menuOpened} onClick={darkModeHandler} >{darkMode ? "dark mode" : "light mode"}</Menu2>
+      <Menu3 menuOpened={menuOpened} onClick={darkModeHandler} >logout</Menu3>
       <Link href="/" passHref>
         <JumpingTitle>
           <H1>J</H1>
@@ -36,17 +53,72 @@ const Header = () => {
 
 const MenuIcon = styled(GiCogLock)`
   color: ${p => p.theme.ICON.cogwheel};
+  
   cursor: pointer;
   font-size: 3rem;
   position: absolute;
   top: -2px;
   left: -1px;
-  transition: transform 0.2s;
-
-  &:active {
+  transition: 0.2s;
+  transform: ${p => p.menuOpened && "rotate(-70deg)"};
+  z-index: 3;
+  /* &:active {
     transform: rotate(40deg);
-  }
+  } */
 `
+
+const MenuIconMask = styled.div`
+
+  background-color: ${p => p.theme.BG.col1};
+  padding: 27px;
+  cursor: pointer;
+  position: absolute;
+  top: -2px;
+  left: -1px;
+  transition: 0.2s;
+  /* transform: ${p => p.menuOpened && "rotate(-50deg)"}; */
+  z-index: 2;
+  /* &:active {
+    transform: rotate(40deg);
+  } */
+
+`
+
+const Menu = styled.div`
+  color: ${p => p.theme.TEXT.fadedText2};
+  z-index: 1;
+  top: -2px;
+  left: -1px;
+  position: absolute;
+  transition: transform 0.2s;
+  /* transition-delay: ${p => !p.menuOpened ? "0.1s" : "0.0s"}; */
+  transform: ${p => !p.menuOpened ? "translate(90px, 18px)" : "translate(-200px, 18px)"};
+  cursor: pointer;
+`
+const Menu2 = styled.div`
+  color: ${p => p.theme.TEXT.fadedText2};
+  z-index: 1;
+  top: -2px;
+  left: -1px;
+  position: absolute;
+  transition: transform 0.2s;
+  transition-delay: ${p => !p.menuOpened ? "0.5s" : "0"};
+  transform: ${p => !p.menuOpened ? "translate(260px, 18px)" : "translate(-200px, 18px)"};
+  cursor: pointer;
+`
+const Menu3 = styled.div`
+  color: ${p => p.theme.TEXT.fadedText2};
+  z-index: 1;
+  top: -2px;
+  left: -1px;
+  position: absolute;
+  transition: transform 0.2s;
+  transition-delay: ${p => !p.menuOpened ? "1s" : "0"};
+  transform: ${p => !p.menuOpened ? "translate(430px, 18px)" : "translate(-200px, 18px)"};
+  cursor: pointer;
+`
+
+
 
 const HeaderDiv = styled.header`
   max-width: 900px;

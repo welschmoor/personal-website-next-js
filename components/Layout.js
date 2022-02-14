@@ -1,16 +1,18 @@
 import Navbar from "./Navbar/Navbar"
 import Header from "./Header/Header"
+import { useState } from 'react'
+
 
 //styles
 import styled from "styled-components"
 import Footer from "./Footer/Footer"
 
 
-const Layout = ({ children }) => {
+const Layout = ({ children, darkMode, setDarkMode }) => {
   return (
     <LayoutWrapper>
       <LayoutContent>
-        <Header />
+        <Header setDarkMode={setDarkMode} darkMode={darkMode} />
         <Main>
           {children}
         </Main>
@@ -22,6 +24,7 @@ const Layout = ({ children }) => {
 
 
 const LayoutWrapper = styled.div`
+  transition: ${p => p.theme.TIME.zero2};
   background-color: ${p => p.theme.BG.col1};
   min-height: 100vh;
 `

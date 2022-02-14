@@ -61,25 +61,7 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 
-export const lightTheme = {
-  BG: {
-    col1: "#E4DFD8",
-    col2: "hsl(35, 18.2%, 92.1%)",
-  },
-  TEXT: {
-    col1: "black",
-    mainNav: "#524949",
-  },
-  MARGIN: {
-    mar10: "10px",
-  },
-  MISC: {
-    scrollbar: "hsl(34.99999999999998, 18.181818181818198%, 77.05882352941177%)",
-  }
-}
-
-
-export const darkTheme = {
+export const lightTheme =  {
   BG: {
     col1: "#E4DFD8",
     col2: "hsl(35, 18.2%, 92.1%)",
@@ -88,6 +70,7 @@ export const darkTheme = {
     col1: "black",
     mainNav: "#524949",
     fadedText: "hsl(0, 5.806451612903232%, 38.3921568627451%)",
+    fadedText2: "hsl(0, 16.882352941176484%, 67.33333333333333%)",
   },
   MARGIN: {
     mar10: "10px",
@@ -105,5 +88,36 @@ export const darkTheme = {
     wheat: "hsl(0, 23.882352941176484%, 79.33333333333333%)",
     earth: "hsl(0, 23.882352941176484%, 66.33333333333333%)",
     cogwheel: "hsl(0, 16.882352941176484%, 77.33333333333333%)",
+  }
+}
+
+
+export const darkTheme = {
+  BG: {
+    col1: "hsl(35, 8.2%, 17.12%)",
+    col2: "hsl(35, 18.2%, 92.1%)",
+  },
+  TEXT: {
+    col1: "white",
+    mainNav: "hsl(0, 5.8%, 70%)",
+    fadedText: "hsl(0, 5.806451612903232%, 38.3921568627451%)",
+    fadedText2: "hsl(0, 16.882352941176484%, 67.33333333333333%)",
+  },
+  MARGIN: {
+    mar10: "10px",
+    mar20: "20px",
+  },
+  MISC: {
+    scrollbar: "#E4DFD8",
+    separator: "hsl(34.99999999999998, 18.181818181818198%, 77.05882352941177%)",
+    separator2: "hsl(34.99999999999998, 18.181818181818198%, 74.05882352941177%)",
+  },
+  TIME: {
+    zero2: "0.2s",
+  },
+  ICON: {
+    wheat: "hsl(0, 23.882352941176484%, 79.33333333333333%)",
+    earth: "hsl(0, 23.882352941176484%, 66.33333333333333%)",
+    cogwheel: "hsl(0, 16.882352941176484%, 67.33333333333333%)",
   }
 }

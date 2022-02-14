@@ -62,7 +62,7 @@ const AsideContent = styled.div`
 `
 
 const BookTitle = styled.h5`
-  color: #1098ad;
+  color: ${p => p.theme.TEXT.mainNav};
   font-weight: 600;
 `
 
