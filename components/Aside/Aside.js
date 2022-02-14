@@ -41,7 +41,8 @@ const AsideWrapper = styled.aside`
   /* border-right: 12px solid grey; */
   padding-bottom: 30px; 
   margin-top: 30px;
-
+  color: ${p => p.theme.TEXT.mainNav};
+  
   @media (max-width: 808px) {
     border-left: none; 
 
@@ -68,7 +69,7 @@ const BookTitle = styled.h5`
 
 const Author = styled.p`
   font-size: 18px;
-
+  color: ${p => p.theme.TEXT.mainNav};
 
 `
 export default Aside

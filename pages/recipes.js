@@ -103,6 +103,7 @@ const PowderIcon = styled(GiPowder)`
 
 const RecipeName = styled(ProjectTitle)`
   margin-top: 40px;
+  color: ${p => p.theme.TEXT.mainNav};
 `
 
 const IngredientsUL = styled.ul`
@@ -145,7 +146,7 @@ const RecipesTitle = styled(Hometitle)`
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
-
+  color: ${p => p.theme.TEXT.mainNav};
 `
 
 const P = styled.p`

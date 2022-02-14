@@ -55,7 +55,8 @@ export const GlobalStyle = createGlobalStyle`
   }
   ::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background-color: ${p => p.theme.TEXT.scrollbar};
+    background-color: ${p => p.theme.MISC.scrollbar};
+
   }
 
 `
@@ -77,7 +78,7 @@ export const lightTheme =  {
     mar20: "20px",
   },
   MISC: {
-    scrollbar: "#E4DFD8",
+    scrollbar: "hsl(34.99999999999998, 14.181818181818198%, 77.05882352941177%)",
     separator: "hsl(34.99999999999998, 18.181818181818198%, 77.05882352941177%)",
     separator2: "hsl(34.99999999999998, 18.181818181818198%, 74.05882352941177%)",
   },
@@ -108,9 +109,9 @@ export const darkTheme = {
     mar20: "20px",
   },
   MISC: {
-    scrollbar: "#E4DFD8",
-    separator: "hsl(34.99999999999998, 18.181818181818198%, 77.05882352941177%)",
-    separator2: "hsl(34.99999999999998, 18.181818181818198%, 74.05882352941177%)",
+    scrollbar: "hsl(34.99999999999998, 8.181818181818198%, 27.05882352941177%)",
+    separator: "hsl(34.99999999999998, 8.181818181818198%, 37.05882352941177%)",
+    separator2: "hsl(34.99999999999998, 2.181818181818198%, 47.05882352941177%)",
   },
   TIME: {
     zero2: "0.2s",

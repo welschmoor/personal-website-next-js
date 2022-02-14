@@ -35,6 +35,7 @@ const HomeGrid = styled.div`
 
 const P = styled.p`
   line-height: 1.5;
+  color: ${p => p.theme.TEXT.mainNav};
 `
 
 const Text = styled.div`

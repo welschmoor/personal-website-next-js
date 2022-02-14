@@ -32,6 +32,11 @@ const A = styled.a`
     padding: 4px 0;
     border-bottom: 3px solid #7a7875;
   }
+
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 `
 
 const Nav = styled.nav`

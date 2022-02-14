@@ -7,6 +7,7 @@ export const Hometitle = styled.h1`
   margin-top: 20px;
   font-size: 30px;
   font-weight: 600;
+  color: ${p => p.theme.TEXT.mainNav};
 `
 
 export const HometitleCentered = styled(Hometitle)`

@@ -25,8 +25,8 @@ const Header = ({ darkMode, setDarkMode }) => {
       <MenuIcon menuOpened={menuOpened} onClick={openCloseMenu} />
       <MenuIconMask />
       <Menu menuOpened={menuOpened} onClick={darkModeHandler} >{darkMode ? "dark mode" : "light mode"}</Menu>
-      <Menu2 menuOpened={menuOpened} onClick={darkModeHandler} >{darkMode ? "dark mode" : "light mode"}</Menu2>
-      <Menu3 menuOpened={menuOpened} onClick={darkModeHandler} >logout</Menu3>
+      <Menu2 menuOpened={menuOpened} >click me</Menu2>
+      <Menu3 menuOpened={menuOpened} >logout</Menu3>
       <Link href="/" passHref>
         <JumpingTitle>
           <H1>J</H1>
@@ -68,7 +68,6 @@ const MenuIcon = styled(GiCogLock)`
 `
 
 const MenuIconMask = styled.div`
-
   background-color: ${p => p.theme.BG.col1};
   padding: 27px;
   cursor: pointer;
@@ -81,10 +80,14 @@ const MenuIconMask = styled.div`
   /* &:active {
     transform: rotate(40deg);
   } */
-
 `
 
 const Menu = styled.div`
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+
   color: ${p => p.theme.TEXT.fadedText2};
   z-index: 1;
   top: -2px;
@@ -95,26 +98,16 @@ const Menu = styled.div`
   transform: ${p => !p.menuOpened ? "translate(90px, 18px)" : "translate(-200px, 18px)"};
   cursor: pointer;
 `
-const Menu2 = styled.div`
-  color: ${p => p.theme.TEXT.fadedText2};
-  z-index: 1;
-  top: -2px;
-  left: -1px;
-  position: absolute;
-  transition: transform 0.2s;
-  transition-delay: ${p => !p.menuOpened ? "0.5s" : "0"};
-  transform: ${p => !p.menuOpened ? "translate(260px, 18px)" : "translate(-200px, 18px)"};
+
+const Menu2 = styled(Menu)`
+  /* transition-delay: ${p => !p.menuOpened ? "0.5s" : "0"}; */
+  transform: ${p => !p.menuOpened ? "translate(232px, 18px)" : "translate(-200px, 18px)"};
   cursor: pointer;
 `
-const Menu3 = styled.div`
-  color: ${p => p.theme.TEXT.fadedText2};
-  z-index: 1;
-  top: -2px;
-  left: -1px;
-  position: absolute;
-  transition: transform 0.2s;
-  transition-delay: ${p => !p.menuOpened ? "1s" : "0"};
-  transform: ${p => !p.menuOpened ? "translate(430px, 18px)" : "translate(-200px, 18px)"};
+
+const Menu3 = styled(Menu)`
+  /* transition-delay: ${p => !p.menuOpened ? "1s" : "0"}; */
+  transform: ${p => !p.menuOpened ? "translate(350px, 18px)" : "translate(-200px, 18px)"};
   cursor: pointer;
 `
 
@@ -150,11 +143,16 @@ const JumpingTitle = styled.div`
     width: 240px;
     cursor: pointer;
 
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
     @media (max-width: 736px) {
       justify-content: start;
-    align-content: center;
-    align-items: end;
-    justify-items: start;
+      align-content: center;
+      align-items: end;
+      justify-items: start;
   }
 `
 
@@ -163,7 +161,7 @@ const H1 = styled.h1`
     align-self: center;
     border: 1 solid transparent;
     transition: height ${p => p.theme.TIME.zero2};
-    color: #524949;
+    color: ${p => p.theme.TEXT.mainNav};
     font-size: 38px;
     font-weight: 700;
     font-family: century;
