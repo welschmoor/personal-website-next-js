@@ -6,16 +6,12 @@ import { GiCogLock } from "react-icons/gi"
 import { useState } from "react"
 
 
-
 const Header = ({ darkMode, setDarkMode }) => {
   const [menuOpened, setMenuOpened] = useState(true)
-  console.log(darkMode)
   const openCloseMenu = () => {
-    console.log(menuOpened)
     setMenuOpened(p => !p)
   }
   const darkModeHandler = () => {
-    console.log("dm clicked")
     setDarkMode(p => !p)
     localStorage.setItem("memDarkMode", darkMode)
   }

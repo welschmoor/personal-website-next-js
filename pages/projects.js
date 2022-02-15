@@ -2,9 +2,9 @@
 
 import Project from "../components/Project/Project"
 import { Hometitle } from "../STYLES/styleText"
+import { GiBookPile } from "react-icons/gi"
 import styled from "styled-components"
 import Head from "next/head"
-import { GiBookPile } from "react-icons/gi"
 
 //images
 import YTClonePictureForGithub from "../static/YTClonePictureForGithub.jpg"

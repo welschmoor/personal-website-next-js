@@ -14,7 +14,6 @@ const App = ({ Component, pageProps }) => {
     setDarkMode(
       window.localStorage.getItem("memDarkMode") === "false"
     )
-
   }, [])
 
   return (

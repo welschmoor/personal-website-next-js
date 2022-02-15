@@ -9,7 +9,7 @@ import { Hometitle, HometitleCentered } from "../STYLES/styleText"
 import Aside from "../components/Aside/Aside"
 
 
-const Hopepage = () => {
+const Homepage = () => {
   return (
     <HomeGrid>
       <Head><title>Johannes Welsch - Homepage</title></Head>
@@ -44,4 +44,4 @@ const Text = styled.div`
 
 
 
-export default Hopepage
+export default Homepage
