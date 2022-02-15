@@ -62,7 +62,7 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 
-export const lightTheme =  {
+export const lightTheme = {
   BG: {
     col1: "#E4DFD8",
     col2: "hsl(35, 18.2%, 92.1%)",
@@ -72,6 +72,7 @@ export const lightTheme =  {
     mainNav: "#524949",
     fadedText: "hsl(0, 5.806451612903232%, 38.3921568627451%)",
     fadedText2: "hsl(0, 16.882352941176484%, 67.33333333333333%)",
+    highlight: "hsl(0, 5.806451612903232%, 55.3921568627451%)",
   },
   MARGIN: {
     mar10: "10px",
@@ -103,6 +104,7 @@ export const darkTheme = {
     mainNav: "hsl(0, 5.8%, 70%)",
     fadedText: "hsl(0, 5.806451612903232%, 53.3921568627451%)",
     fadedText2: "hsl(0, 16.882352941176484%, 67.33333333333333%)",
+    highlight: "hsl(0, 5.8%, 50%)",
   },
   MARGIN: {
     mar10: "10px",

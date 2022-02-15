@@ -20,32 +20,42 @@ const Header = ({ darkMode, setDarkMode }) => {
     <HeaderDiv>
       <MenuIcon menuOpened={menuOpened} onClick={openCloseMenu} />
       <MenuIconMask />
-      <Menu menuOpened={menuOpened} onClick={darkModeHandler} >{darkMode ? "dark mode" : "light mode"}</Menu>
+      <Menu menuOpened={menuOpened} onClick={darkModeHandler} darkMode={darkMode} >{darkMode ? "theme: dark" : "theme: light"}</Menu>
       <Menu2 menuOpened={menuOpened} >click me</Menu2>
       <Menu3 menuOpened={menuOpened} >logout</Menu3>
-      <Link href="/" passHref>
-        <JumpingTitle>
-          <H1>J</H1>
-          <H1>o</H1>
-          <H1>h</H1>
-          <H1>a</H1>
-          <H1>n</H1>
-          <H1>n</H1>
-          <H1>e</H1>
-          <H1>s</H1>
-          <H1>&nbsp;</H1>
-          <H1>W</H1>
-          <H1>e</H1>
-          <H1>l</H1>
-          <H1>s</H1>
-          <H1>c</H1>
-          <H1>h</H1>
-        </JumpingTitle>
-      </Link>
+      <ExtraDiv>
+
+        <Link href="/" passHref>
+          <JumpingTitle>
+            <H1>J</H1>
+            <H1>o</H1>
+            <H1>h</H1>
+            <H1>a</H1>
+            <H1>n</H1>
+            <H1>n</H1>
+            <H1>e</H1>
+            <H1>s</H1>
+            <H1>&nbsp;</H1>
+            <H1>W</H1>
+            <H1>e</H1>
+            <H1>l</H1>
+            <H1>s</H1>
+            <H1>c</H1>
+            <H1>h</H1>
+          </JumpingTitle>
+        </Link>
+      </ExtraDiv>
       <Navbar />
-    </HeaderDiv>
+    </HeaderDiv >
   )
 }
+
+
+const ExtraDiv = styled.div`
+  /* display: flex; */
+  width: 295px;
+  margin: 0 auto;
+`
 
 const MenuIcon = styled(GiCogLock)`
   color: ${p => p.theme.ICON.cogwheel};
@@ -91,19 +101,21 @@ const Menu = styled.div`
   position: absolute;
   transition: transform 0.2s;
   /* transition-delay: ${p => !p.menuOpened ? "0.1s" : "0.0s"}; */
-  transform: ${p => !p.menuOpened ? "translate(90px, 18px)" : "translate(-200px, 18px)"};
+  transform: ${p => !p.menuOpened
+    ? "translate(90px, 18px)"
+    : "translate(-200px, 18px)"};
   cursor: pointer;
 `
 
 const Menu2 = styled(Menu)`
   /* transition-delay: ${p => !p.menuOpened ? "0.5s" : "0"}; */
-  transform: ${p => !p.menuOpened ? "translate(232px, 18px)" : "translate(-200px, 18px)"};
+  transform: ${p => !p.menuOpened ? "translate(240px, 18px)" : "translate(-200px, 18px)"};
   cursor: pointer;
 `
 
 const Menu3 = styled(Menu)`
   /* transition-delay: ${p => !p.menuOpened ? "1s" : "0"}; */
-  transform: ${p => !p.menuOpened ? "translate(350px, 18px)" : "translate(-200px, 18px)"};
+  transform: ${p => !p.menuOpened ? "translate(352px, 18px)" : "translate(-200px, 18px)"};
   cursor: pointer;
 `
 
@@ -112,6 +124,7 @@ const Menu3 = styled(Menu)`
 const HeaderDiv = styled.header`
   max-width: 900px;
   display: grid;
+  column-gap: 30px;
   grid-template-columns: 360px 1fr;
   justify-content: space-between;
   align-items: center;
@@ -120,7 +133,7 @@ const HeaderDiv = styled.header`
   height: 190px;
   transition: ${p => p.theme.TIME.zero2};
 
-  @media (max-width: 736px) {
+  @media (max-width: 808px) {
     grid-template-columns: 1fr;
     padding: 30px;
   }
@@ -136,7 +149,7 @@ const JumpingTitle = styled.div`
     align-items: center;
     justify-items: center;
     height: 100px;
-    width: 240px;
+    /* width: 240px; */
     cursor: pointer;
 
     -webkit-user-select: none; /* Safari */        
@@ -144,7 +157,7 @@ const JumpingTitle = styled.div`
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
 
-    @media (max-width: 736px) {
+    @media (max-width: 808px) {
       justify-content: start;
       align-content: center;
       align-items: end;

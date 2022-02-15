@@ -46,7 +46,7 @@ const Nav = styled.nav`
   justify-content: end;
   gap: 25px;
 
-  @media (max-width: 736px) {
+  @media (max-width: 808px) {
 
     justify-content: center;
   }

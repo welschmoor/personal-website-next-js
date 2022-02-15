@@ -15,12 +15,17 @@ const Homepage = () => {
       <Head><title>Johannes Welsch - Homepage</title></Head>
       <section>
         <Hometitle>Welcome to my personal Website!</Hometitle>
-        <P>You will find a lot of crap on this site. Food recipies, not some crap copied from the internet, these are my personal recipies that taste like heaven.</P>
-      </section>
+        <P>You will find a lot of <I>crap</I> on this site. Food recipies, not some <I>crap</I> copied from the internet, these are my personal recipies that taste like heaven.</P>
+      </section >
       <Aside />
-    </HomeGrid>
+    </HomeGrid >
   )
 }
+
+const I = styled.span`
+  font-style: italic;
+  color: ${p => p.theme.TEXT.highlight};
+`
 
 
 const HomeGrid = styled.div`

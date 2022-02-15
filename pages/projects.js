@@ -58,11 +58,17 @@ const HomeTitleCentered = styled(Hometitle)`
   margin-top: 0px;
   text-align: center;
   cursor: default;
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 `
 
 const ProjectsWrapper = styled.div`
   /* background-color: ${p => p.theme.BG.col2}; */
   min-height: 69vh;
+  max-width: 800px;
+  margin: 0 auto;
 `
 
 const ProjectsMap = styled.div`

@@ -1,5 +1,5 @@
 # Personal Website
-Live: https://personal-website-rosy-zeta.vercel.app/
+Live: https://personal-website-rosy-zeta.vercel.app
 
 Built with NextJS
 
