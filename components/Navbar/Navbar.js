@@ -11,9 +11,9 @@ const Navbar = () => {
 
   return (
     <Nav>
-      <Link href="/recipes" passHref><A><FatDot path={path} />Recipes</A></Link>
-      <Link href="/projects" passHref><A>Projects</A></Link>
-      <Link href="/about" passHref><A>About</A></Link>
+      <Link href="/recipes" passHref><A><FatDot1 path={path} />Recipes</A></Link>
+      <Link href="/projects" passHref><A><FatDot2 path={path} />Projects</A></Link>
+      <Link href="/about" passHref><A><FatDot3 path={path} />About</A></Link>
     </Nav>
   )
 }
@@ -58,18 +58,30 @@ const Nav = styled.nav`
 `
 
 const FatDot = styled.div`
-  display:  ${p => p.path === "/" ? "none" : "normal"};
-  top: -18px;
-  left: ${p => p.path === "/recipes" 
-  ? "30px" 
-  : p.path === "/projects" ? "138px" : "243px"
-  };
+  top: -16px;
+  /* left: ${p => p.path === "/recipes"
+    ? "30px"
+    : p.path === "/projects" ? "138px" : "243px"
+  }; */
+  left: 50%;
+  transform: translateX(-45%);
   position: absolute;
   padding: 7px;
   border-radius: 50%;
   /* background-color: ${p => p.theme.TEXT.mainNav}; */
-  border: 3px solid ${p => p.theme.TEXT.mainNav};
+  border: 3px solid  ${p => p.theme.ICON.cogwheel};;
+`
 
+const FatDot1 = styled(FatDot)`
+  display:  ${p => p.path === "/recipes" ? "normal" : "none"};
+
+`
+const FatDot2 = styled(FatDot)`
+  display:  ${p => p.path === "/projects" ? "normal" : "none"};
+
+`
+const FatDot3 = styled(FatDot)`
+  display:  ${p => p.path === "/about" ? "normal" : "none"};
 
 `
 

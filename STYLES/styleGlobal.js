@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
 
+
   /* CSS RESET */
 
   html, body, div, span, applet, object, iframe,
