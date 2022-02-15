@@ -30,13 +30,13 @@ const Recipes = () => {
         <IngredientsGrams>
           <li>1kg</li>
           <li>10g</li>
-          <li>300ml (I take Maggie powder)</li>
+          <li>300ml (4g of Maggie powder)</li>
           <li>15g </li>
           <li>1 pinch </li>
           <li>25g (15g if Mustard is hot)</li>
           <li>2 table spoons</li>
           <li>3 table spoons</li>
-          <li>50g finely chopped</li>
+          <li>100g finely chopped</li>
         </IngredientsGrams>
         <IconColumn>
           <PowderIcon />
