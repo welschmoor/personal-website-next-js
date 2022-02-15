@@ -23,7 +23,7 @@ const Footer = () => {
           <UL>
             <li><Link href="/recipes" passHref><A>Recipes</A></Link></li>
             <li><Link href="/projects" passHref><A>Projects</A></Link></li>
-  
+
           </UL>
         </Right>
         <WheatIcon />
@@ -80,6 +80,11 @@ const Copyright = styled.div`
     margin-left: ${p => p.theme.MARGIN.mar10};
     margin-right: ${p => p.theme.MARGIN.mar10};
   }
+
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 `
 
 const A = styled.a`
@@ -101,6 +106,12 @@ const FooterTitle = styled.h2`
 `
 
 const FooterDiv = styled.footer`
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+
+
   display: grid;
   grid-template-columns: 1fr 1fr 200px;
 

@@ -26,7 +26,7 @@ const ProjectWrapper = styled.div`
 `
 
 const ProjectTitle = styled.h2`
-  color: #524949;
+  color: ${p => p.theme.TEXT.mainNav};
   cursor: default;
   font-size: 30px;
   font-weight: 600;
@@ -38,6 +38,8 @@ const Description = styled.p`
    font-size: 0.91rem;
    font-weight: normal;
    padding: 10px 0;
+   color: ${p => p.theme.TEXT.mainNav};
+
 `
 
 const ProjectLink = styled.a`
@@ -46,7 +48,8 @@ const ProjectLink = styled.a`
   text-decoration: none;
   font-size: 0.91rem;
   font-weight: normal;
-  color: ${p => p.theme.TEXT.col1};
+  color: ${p => p.theme.TEXT.mainNav};
+
 `
 
 const LinkSpan = styled.span`
